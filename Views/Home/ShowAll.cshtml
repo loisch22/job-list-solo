@@ -1,0 +1,25 @@
+@{
+  Layout = "_Layout";
+}
+
+
+<h1>Work Experience Portfolio</h1>
+
+@foreach (var work in Model)
+{
+  <p><strong>Company Name:</strong> @work.GetCompanyName()</p>
+
+  <p><strong>Job Title:</strong> @work.GetJobTitle()</p>
+
+  <p><strong>Start Date:</strong> @work.GetStartDate()</p>
+
+  <p><strong>End Date:</strong> @work.GetEndDate()</p>
+
+  <p><strong>Job Description:</strong> @work.GetJobDescription()</p>
+
+  <hr>
+}
+
+<a href="/"><button class="btn btn-primary">Add Work Experience</button></a>
+
+<a href="/"><button class="btn btn-default">Exit</button></a>
